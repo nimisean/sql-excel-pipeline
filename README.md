@@ -18,4 +18,25 @@ Today I built an automated pipeline that transforms raw SQL data into powerful E
 ## 💡 Cool Feature:
 Created a "one-click" report generator that business users can run without touching code!
 
+# 🚀 SQL to Excel Data Pipeline
+
+Automated pipeline that transforms Oracle SQL data into powerful Excel reports with dynamic dashboards.
+
+## ✨ Features
+
+- **Optimized Oracle SQL Queries** for large datasets
+- **PHP Backend** with batch processing
+- **JavaScript Frontend** with real-time preview
+- **Excel Integration** ready for Power Query
+- **Responsive Dashboard** with charts
+
+## 🛠 Tech Stack
+
+- Backend: PHP + Oracle Database
+- Frontend: HTML5, CSS3, JavaScript + Chart.js
+- Data Tools: SQL Optimization, Excel Export
+
+
+
+
 👉 Check out the code snippets in this repo! #SQL #Excel #DataPipeline #PHP #JavaScript
