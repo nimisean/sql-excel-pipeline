@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL to Excel Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 SQL to Excel Data Pipeline</h1>
+            <p>Transform Oracle data into powerful Excel reports</p>
+        </header>
+
+        <div class="dashboard">
+            <!-- Report Parameters -->
+            <div class="control-panel">
+                <h2>Report Parameters</h2>
+                <form id="reportForm">
+                    <div class="form-group">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" name="start_date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="endDate">End Date:</label>
+                        <input type="date" id="endDate" name="end_date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dataLimit">Data Limit:</label>
+                        <select id="dataLimit" name="data_limit">
+                            <option value="1000">1,000 rows</option>
+                            <option value="5000">5,000 rows</option>
+                            <option value="10000">10,000 rows</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" id="generateBtn">Generate Excel Report</button>
+                </form>
+            </div>
+
+            <!-- Live Preview -->
+            <div class="preview-panel">
+                <h2>Data Preview</h2>
+                <div id="dataPreview" class="data-preview">
+                    <p>Select parameters and generate report to see preview</p>
+                </div>
+                
+                <div class="charts">
+                    <canvas id="salesChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+
+            <!-- Download Section -->
+            <div class="download-panel" id="downloadSection" style="display: none;">
+                <h2>📊 Report Ready!</h2>
+                <p>Your Excel file has been generated with optimized SQL queries and ready for Power Query integration.</p>
+                <a id="downloadLink" href="#" class="download-btn">Download Excel File</a>
+                
+                <div class="excel-tips">
+                    <h3>Excel Power Query Tips:</h3>
+                    <ul>
+                        <li>Use Data → Get Data → From File to import</li>
+                        <li>Create pivot tables for summary analysis</li>
+                        <li>Add slicers for interactive filtering</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
